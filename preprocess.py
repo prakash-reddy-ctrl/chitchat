@@ -22,8 +22,8 @@ import math
 USE_CUDA = torch.cuda.is_available()
 device = torch.device("cuda" if USE_CUDA else "cpu")
 
-corpus_name = "chitchat"
-corpus = os.path.join("chatbot", corpus_name)
+corpus_name = "data"
+corpus = os.path.join("movie_lines", corpus_name)
 datafile = os.path.join(corpus, "cornell_movie_lines.txt")
 
 
@@ -133,7 +133,7 @@ def loadPrepareData(corpus, corpus_name, datafile, save_dir):
 
 
 # Load/Assemble voc and pairs
-save_dir = os.path.join("chatbot", "save")
+save_dir = os.path.join("data", "save")
 voc, pairs = loadPrepareData(corpus, corpus_name, datafile, save_dir)
 # Print some pairs to validate
 print("\npairs:")
