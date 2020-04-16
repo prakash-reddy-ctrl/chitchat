@@ -135,10 +135,10 @@ def loadPrepareData(corpus, corpus_name, datafile, save_dir):
 # Load/Assemble voc and pairs
 save_dir = os.path.join("data", "save")
 voc, pairs = loadPrepareData(corpus, corpus_name, datafile, save_dir)
-# Print some pairs to validate
+"""# Print some pairs to validate
 print("\npairs:")
 for pair in pairs[:10]:
-    print(pair)
+    print(pair)"""
 
 
 MIN_COUNT = 3    # Minimum word count threshold for trimming
@@ -225,7 +225,7 @@ def batch2TrainData(voc, pair_batch):
     return inp, lengths, output, mask, max_target_len
 
 
-# Example for validation
+"""# Example for validation
 small_batch_size = 5
 batches = batch2TrainData(voc, [random.choice(pairs) for _ in range(small_batch_size)])
 input_variable, lengths, target_variable, mask, max_target_len = batches
@@ -234,7 +234,7 @@ print("input_variable:", input_variable)
 print("lengths:", lengths)
 print("target_variable:", target_variable)
 print("mask:", mask)
-print("max_target_len:", max_target_len)
+print("max_target_len:", max_target_len)"""
 
 
 class EncoderRNN(nn.Module):
@@ -564,9 +564,9 @@ batch_size = 64
 # Set checkpoint to load from; set to None if starting from scratch
 loadFilename = None
 checkpoint_iter =4000 
-#loadFilename = os.path.join(save_dir, model_name, corpus_name,
+"""#loadFilename = os.path.join(save_dir, model_name, corpus_name,
                             '{}-{}_{}'.format(encoder_n_layers, decoder_n_layers, hidden_size),
-                            '{}_checkpoint.tar'.format(checkpoint_iter))
+                            '{}_checkpoint.tar'.format(checkpoint_iter))"""
 
 
 # Load model if a loadFilename is provided
