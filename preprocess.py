@@ -22,8 +22,8 @@ import math
 USE_CUDA = torch.cuda.is_available()
 device = torch.device("cuda" if USE_CUDA else "cpu")
 
-corpus_name = "data"
-corpus = os.path.join("movie_lines", corpus_name)
+corpus_name = "movie_lines"
+corpus = os.path.join("data", corpus_name)
 datafile = os.path.join(corpus, "cornell_movie_lines.txt")
 
 
